@@ -1,6 +1,10 @@
-<h1>Our Services</h1>
-<div class="list-group">
-    {{#each services}}
-    <a href="{{url}}" class="list-group-item list-group-item-action">{{name}}</a>
-    {{/each}}
+<h1>Services Page</h1>
+
+{{#each services as |service|}}
+<div class="card mb-2">
+    <div class="card-body">
+        <h5 class="card-title">{{service.name}}</h5>
+        <a href="{{service.url}}">Más info</a>
+    </div>
 </div>
+{{/each}}
